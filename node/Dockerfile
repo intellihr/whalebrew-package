@@ -1,6 +1,9 @@
-FROM node:8.11-alpine
+# quay.io/intellihr/whalebrew-node:8.14
 
-RUN apk update && apk upgrade && \
+FROM node:8.14-alpine
+
+RUN npm install tslint typescript -g && \
+    apk update && apk upgrade && \
     apk add --no-cache bash git openssh
 
 ENTRYPOINT ["node"]
