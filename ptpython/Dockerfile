@@ -1,7 +1,9 @@
-FROM python:3-alpine
+FROM quay.io/intellihr/whalebrew-pytools:3.6
 
-RUN pip install ptpython
-
+LABEL io.whalebrew.name 'ptpython'
+LABEL io.whalebrew.config.working_dir '/workdir'
 LABEL io.whalebrew.config.volumes '["~/.ptpython:/.ptpython"]'
+
+WORKDIR /workdir
 
 ENTRYPOINT ["ptpython"]
