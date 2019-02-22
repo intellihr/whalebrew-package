@@ -11,3 +11,5 @@ RUN go get -u golang.org/x/lint/golint \
   github.com/bradleyjkemp/cupaloy \
   github.com/d4l3k/go-pry \
   github.com/motemen/gore
+
+ENTRYPOINT ["go"]
