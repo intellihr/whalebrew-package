@@ -6,10 +6,21 @@ RUN apk --no-cache add curl git make
 RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
 RUN go get -u golang.org/x/lint/golint \
-  golang.org/x/tools/cmd/goimports \
-  github.com/sanity-io/litter \
+  github.com/acroca/go-symbols \
   github.com/bradleyjkemp/cupaloy \
   github.com/d4l3k/go-pry \
-  github.com/motemen/gore
+  github.com/go-delve/delve/cmd/dlv \
+  github.com/mdempsky/gocode \
+  github.com/motemen/gore \
+  github.com/ramya-rao-a/go-outline \
+  github.com/rogpeppe/godef \
+  github.com/sanity-io/litter \
+  github.com/sqs/goreturns \
+  github.com/uudashr/gopkgs \
+  github.com/zmb3/gogetdoc \
+  golang.org/x/tools/cmd/godoc \
+  golang.org/x/tools/cmd/goimports \
+  golang.org/x/tools/cmd/gorename \
+  golang.org/x/tools/cmd/guru
 
 ENTRYPOINT ["go"]
