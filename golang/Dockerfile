@@ -24,4 +24,9 @@ RUN go get -u golang.org/x/lint/golint \
   golang.org/x/tools/cmd/guru
 
 WORKDIR /workdir
+
+# This is a special hack to make vscode editor work
+ENV GOPATH=/go:/vendor
+LABEL io.whalebrew.config.volumes '["${PWD}/vendor:/vendor/src"]'
+
 ENTRYPOINT ["go"]
