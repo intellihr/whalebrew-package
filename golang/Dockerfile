@@ -26,6 +26,8 @@ RUN go get -u golang.org/x/lint/golint \
 WORKDIR /workdir
 
 # This is a special hack to make vscode editor work
+RUN mkdir -p /vendor && chmod 666 -R /vendor && \
+    mkdir -p /go/.cache && chmod 666 -R /go/.cache
 ENV GOPATH=/go:/vendor
 LABEL io.whalebrew.config.volumes '["${PWD}/vendor:/vendor/src"]'
 
