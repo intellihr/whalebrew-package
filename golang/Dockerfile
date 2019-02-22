@@ -23,4 +23,5 @@ RUN go get -u golang.org/x/lint/golint \
   golang.org/x/tools/cmd/gorename \
   golang.org/x/tools/cmd/guru
 
+WORKDIR /workdir
 ENTRYPOINT ["go"]
