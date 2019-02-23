@@ -16,7 +16,7 @@ RUN go get -u golang.org/x/lint/golint \
   github.com/rogpeppe/godef \
   github.com/sanity-io/litter \
   github.com/sqs/goreturns \
-  github.com/uudashr/gopkgs \
+  github.com/uudashr/gopkgs/cmd/gopkgs \
   github.com/zmb3/gogetdoc \
   golang.org/x/tools/cmd/godoc \
   golang.org/x/tools/cmd/goimports \
