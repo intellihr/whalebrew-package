@@ -6,4 +6,6 @@ WORKDIR /workdir
 
 RUN rustup component add rustfmt && rustup target add x86_64-unknown-linux-musl
 
+LABEL io.whalebrew.config.environment '["USER"]'
+
 ENTRYPOINT ["cargo"]
