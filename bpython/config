@@ -1,0 +1,12 @@
+# see http://docs.bpython-interpreter.org/configuration.html
+# for all configurable options
+
+# General section tag
+[general]
+
+# History file (default: ~/.pythonhist):
+hist_file = /.bpython/.pythonhist
+
+[keyboard]
+
+[curtsies]
